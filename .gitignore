@@ -1,0 +1,8 @@
+models/
+*.joblib
+*.pkl
+data/raw/
+data/processed/
+results/
+.DS_Store
+.ipynb_checkpoints/

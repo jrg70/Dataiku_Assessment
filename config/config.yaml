@@ -1,0 +1,85 @@
+# config.yaml
+#  General settings
+random_seed: 42
+
+#  Data paths 
+paths:
+  raw: data/raw
+  processed: data/processed
+  models: models
+  results: results
+
+#  Data settings
+target: income
+features:
+  numeric:
+    - age
+    - wage_per_hour
+    - capital_gains
+    - capital_losses
+    - dividends_from_stocks
+    - num_persons_worked_for_employer
+    - weeks_worked_in_year
+
+  categorical:
+    - class_of_worker
+    - detailed_industry_recode
+    - detailed_occupation_recode
+    - education
+    - enroll_in_edu_inst_last_wk
+    - marital_stat
+    - major_industry_code
+    - major_occupation_code
+    - race
+    - hispanic_origin
+    - sex
+    - member_of_a_labor_union
+    - reason_for_unemployment
+    - full_or_part_time_employment_stat
+    - tax_filer_stat
+    - region_of_previous_residence
+    - state_of_previous_residence
+    - detailed_household_and_family_stat
+    - detailed_household_summary_in_household
+    - migration_code_change_in_msa
+    - migration_code_change_in_reg
+    - migration_code_move_within_reg
+    - live_in_this_house_1_year_ago
+    - migration_prev_res_in_sunbelt
+    - family_members_under_18
+    - country_of_birth_father
+    - country_of_birth_mother
+    - country_of_birth_self
+    - citizenship
+    - own_business_or_self_employed
+    - fill_inc_questionnaire_for_veterans_admin
+    - veterans_benefits
+    - year
+
+#  Modelling settings ; following paramters can be adjusted as needed but it may take significantly longer to run
+modeling:
+  cv_folds: 5
+  scoring: [roc_auc, f1_macro]  # first one is used for refit/selection
+  models:
+    logreg:
+      C: [0.1, 1.0, 10.0]
+      max_iter: [500]
+    random_forest:
+      n_estimators: [100, 300]
+      #max_depth: [None, 10, 20]
+    decision_tree:
+      #max_depth: [None, 10, 20]
+      min_samples_split: [2, 10, 50]
+      min_samples_leaf: [1, 5, 10]
+    gradient_boosting:
+      n_estimators: [100, 300]
+      learning_rate: [0.05, 0.1]
+      #max_depth: [3, 5]
+    xgboost:                
+      n_estimators: [200, 500]
+      learning_rate: [0.05, 0.1]
+      #max_depth: [3, 5]
+      #subsample: [0.8, 1.0]  # add if needed
+      #colsample_bytree: [0.8, 1.0]
+      #scale_pos_weight: [1.0, 5.0]
+
