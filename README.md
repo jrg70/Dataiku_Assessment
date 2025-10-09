@@ -47,12 +47,12 @@ jupyter notebook notebooks/eda.ipynb
 ---
 
 ## Results
-5 Algorithms have been choosen for an inital screening, pipeline automatically trains and tunes:
+5 Algorithms have been choosen for an inital screening, pipeline automatically trains and tunes...
 - Logistic Regression
 - Decision Tree
 - Random Forest
 - Gradient Boosting
-- ßXGBoost (performs best) 
+- XGBoost (performs best) 
 
 ---
 
