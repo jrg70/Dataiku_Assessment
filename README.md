@@ -57,7 +57,7 @@ project-name/
 ---
 
 ## Notes
-- Raw data is committed in `data/raw`, other data produced while running such as processed and cleaned data as well as models is captured in the `.gitignore`.
+- Raw data is committed in `data/raw`, other data produced while running such as processed and cleaned data as well as models are only stored locally after running (part of the `.gitignore`).
 - `slides/` folder for final presentations.
 - `config.yaml` used for hyperparameter management
 
