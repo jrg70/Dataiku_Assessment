@@ -28,21 +28,21 @@ project-name/
 
 ### 2. Create a virtual environment
 `python -m venv .venv`  
-`source .venv/bin/activate`   # Mac/Linux  
+`make activate` (or `source .venv/bin/activate`)  # Mac/Linux  
 `.venv\Scripts\activate`     # Windows  
 
 ### 3. Install dependencies
-`pip install -r requirements.txt`  
+`make install` (or `pip install -r requirements.txt`)
 
 ---
 
 ## Usage
 
 ### 1. load, preprocess and model
-python src/run.py
+`make run` (or `python src/run.py`)
 
 ### 2. open and run EDA notebook (optional)
-jupyter notebook notebooks/eda.ipynb
+`make notebook` (or `jupyter notebook notebooks/eda.ipynb`)
 
 ---
 
@@ -57,9 +57,9 @@ jupyter notebook notebooks/eda.ipynb
 ---
 
 ## Notes
-- Keep large data files in `data/` but don’t commit them to GitHub.  
-- Save outputs (predictions, metrics, plots) in `results/`.  
-- `slides/` folder for final presentations.  
+- Raw data is committed in `data/raw`, other data produced while running such as processed and cleaned data as well as models is captured in the `.gitignore`.
+- `slides/` folder for final presentations.
+- `config.yaml` used for hyperparameter management
 
 ---
 
