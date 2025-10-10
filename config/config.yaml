@@ -62,7 +62,7 @@ modeling:
   scoring: [roc_auc, f1_macro]  # first one is used for refit/selection
   models:
     logreg:
-      C: [0.1, 1.0, 10.0]
+      C: [0.1]
       max_iter: [500]
     random_forest:
       n_estimators: [100, 300]

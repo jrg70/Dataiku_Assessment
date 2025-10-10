@@ -34,7 +34,7 @@ from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 
 from xgboost import XGBClassifier
 
-# ---------- small helpers ----------
+#  small helpers 
 def load_config(path="config/config.yaml"):
     with open(path, "r") as f:
         return yaml.safe_load(f)
@@ -62,7 +62,7 @@ def resolve_columns(feature_names, actual_cols):
     return resolved, missing
 
 
-# ---------- main ----------
+#  main 
 def main():
     cfg = load_config()
 
