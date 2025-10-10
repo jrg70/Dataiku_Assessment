@@ -1,5 +1,5 @@
 # Project Title: UK Dataiku Data Scientist Technical Assessment
-Created from data-science-template
+Created from data-science-template (https://github.com/jrg70/data-science-template)
 ## Overview
 The goal is to develop a predictive model that classifies individuals into income brackets (<=50K or >50K) based on demographic and employment attributes extracted from the U.S. Census Bureau database.
 
