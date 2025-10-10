@@ -28,7 +28,7 @@ project-name/
 
 ### 2. Create a virtual environment
 `python -m venv .venv`  
-`make activate` (or `source .venv/bin/activate`)  # Mac/Linux  
+`source .venv/bin/activate`  # Mac/Linux  
 `.venv\Scripts\activate`     # Windows  
 
 ### 3. Install dependencies
